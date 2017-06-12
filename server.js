@@ -21,13 +21,14 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use((req, res, next) => {
-  res.render('maintenance.hbs', {
-    pageTitle: 'Maintenance Page',
-    welcomeMessage: 'We\'re fixing something. We\'ll be right back!',
-    currentYear: new Date().getFullYear()
-  });
-});
+// Maintenance script
+// app.use((req, res, next) => {
+//   res.render('maintenance.hbs', {
+//     pageTitle: 'Maintenance Page',
+//     welcomeMessage: 'We\'re fixing something. We\'ll be right back!',
+//     currentYear: new Date().getFullYear()
+//   });
+// });
 
 app.use(express.static(__dirname + '/public'));
 
